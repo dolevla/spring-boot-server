@@ -1,10 +1,10 @@
-package com.meinprojekt.repository;
+package com.proxyapp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.meinprojekt.model.MeinModel;
+import com.proxyapp.model.ProxyAppModel;
 
 @Repository
-public interface MeinRepository extends JpaRepository<MeinModel, Long> {
+public interface ProxyAppRepository extends JpaRepository<ProxyAppModel, Long> {
     // Add custom query methods here
 }

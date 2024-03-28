@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.meinprojekt</groupId>
-    <artifactId>mein-spring-boot-server</artifactId>
+    <groupId>com.proxyapp</groupId>
+    <artifactId>proxyapp-spring-boot-server</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Mein Spring Boot Server</name>
+    <name>Proxy App Spring Boot Server</name>
     <description>Spring Boot server that consumes HTTP requests and interacts with Oracle database and RabbitMQ</description>
 
     <properties>

@@ -7,28 +7,28 @@ This is a Spring Boot server project that consumes HTTP requests, retrieves addi
 The project has the following structure:
 
 ```
-mein-spring-boot-server
+proxyapp-spring-boot-server
 ├── src
 │   ├── main
 │   │   ├── java
 │   │   │   ├── com
-│   │   │   │   ├── meinprojekt
+│   │   │   │   ├── proxyapp
 │   │   │   │   │   ├── Application.java
 │   │   │   │   │   ├── controller
-│   │   │   │   │   │   └── MeinController.java
+│   │   │   │   │   │   └── ProxyAppController.java
 │   │   │   │   │   ├── service
-│   │   │   │   │   │   └── MeinService.java
+│   │   │   │   │   │   └── ProxyAppService.java
 │   │   │   │   │   ├── repository
-│   │   │   │   │   │   └── MeinRepository.java
+│   │   │   │   │   │   └── ProxyAppRepository.java
 │   │   │   │   │   └── model
-│   │   │   │   │       └── MeinModel.java
+│   │   │   │   │       └── ProxyAppModel.java
 │   │   ├── resources
 │   │   │   ├── application.properties
 │   │   │   └── logback.xml
 │   ├── test
 │   │   ├── java
 │   │   │   └── com
-│   │   │       └── meinprojekt
+│   │   │       └── proxyapp
 │   │   │           └── ApplicationTests.java
 ├── .mvn
 │   └── wrapper
@@ -43,21 +43,21 @@ mein-spring-boot-server
 
 ## Files
 
-- `src/main/java/com/meinprojekt/Application.java`: This file is the entry point of the Spring Boot application. It contains the main method to start the server.
+- `src/main/java/com/proxyapp/Application.java`: This file is the entry point of the Spring Boot application. It contains the main method to start the server.
 
-- `src/main/java/com/meinprojekt/controller/MeinController.java`: This file exports a class `MeinController` which handles the HTTP requests. It contains methods to consume the incoming requests and interact with the Oracle database and RabbitMQ.
+- `src/main/java/com/proxyapp/controller/ProxyAppController.java`: This file exports a class `ProxyAppController` which handles the HTTP requests. It contains methods to consume the incoming requests and interact with the Oracle database and RabbitMQ.
 
-- `src/main/java/com/meinprojekt/service/MeinService.java`: This file exports a class `MeinService` which provides the business logic for interacting with the Oracle database. It contains methods to retrieve additional data from the database.
+- `src/main/java/com/proxyapp/service/ProxyAppService.java`: This file exports a class `ProxyAppService` which provides the business logic for interacting with the Oracle database. It contains methods to retrieve additional data from the database.
 
-- `src/main/java/com/meinprojekt/repository/MeinRepository.java`: This file exports a class `MeinRepository` which handles the database operations. It contains methods to query the Oracle database.
+- `src/main/java/com/proxyapp/repository/ProxyAppRepository.java`: This file exports a class `ProxyAppRepository` which handles the database operations. It contains methods to query the Oracle database.
 
-- `src/main/java/com/meinprojekt/model/MeinModel.java`: This file exports a class `MeinModel` which represents the data model for the application. It contains the necessary properties and methods to store and retrieve data.
+- `src/main/java/com/proxyapp/model/ProxyAppModel.java`: This file exports a class `ProxyAppModel` which represents the data model for the application. It contains the necessary properties and methods to store and retrieve data.
 
 - `src/main/resources/application.properties`: This file contains the configuration properties for the Spring Boot application, such as the database connection details and RabbitMQ configuration.
 
 - `src/main/resources/logback.xml`: This file contains the configuration for logging in the application.
 
-- `src/test/java/com/meinprojekt/ApplicationTests.java`: This file contains the test cases for the application.
+- `src/test/java/com/proxyapp/ApplicationTests.java`: This file contains the test cases for the application.
 
 - `.mvn/wrapper/MavenWrapperDownloader.java`: This file is used by the Maven Wrapper to download the specified version of Maven.
 

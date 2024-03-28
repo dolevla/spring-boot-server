@@ -1,9 +1,9 @@
-package com.meinprojekt.service;
+package com.proxyapp.service;
 
 import org.springframework.stereotype.Service;
 
 @Service
-public class MeinService {
+public class ProxyAppService {
     // Add necessary dependencies and imports
 
     // Method to retrieve additional data from the Oracle database

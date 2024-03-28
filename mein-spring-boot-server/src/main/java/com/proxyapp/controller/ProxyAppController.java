@@ -1,7 +1,7 @@
-package com.meinprojekt.controller;
+package com.proxyapp.controller;
 
-import com.meinprojekt.model.MeinModel;
-import com.meinprojekt.service.MeinService;
+import com.proxyapp.model.ProxyAppModel;
+import com.proxyapp.service.ProxyAppService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,24 +13,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class MeinController {
+public class ProxyAppController {
 
-    private final MeinService meinService;
+    private final ProxyAppService proxyAppService;
     private final RabbitTemplate rabbitTemplate;
 
     @Autowired
-    public MeinController(MeinService meinService, RabbitTemplate rabbitTemplate) {
-        this.meinService = meinService;
+    public ProxyAppController(ProxyAppService proxyAppService, RabbitTemplate rabbitTemplate) {
+        this.proxyAppService = proxyAppService;
         this.rabbitTemplate = rabbitTemplate;
     }
 
     @PostMapping("/data")
-    public ResponseEntity<String> processData(@RequestBody MeinModel meinModel) {
+    public ResponseEntity<String> processData(@RequestBody ProxyAppModel proxyAppModel) {
         // Retrieve additional data from Oracle database using the service
-        String additionalData = meinService.getAdditionalData(meinModel.getId());
+        String additionalData = proxyAppService.getAdditionalData(proxyAppModel.getId());
 
         // Put the incoming request data to the specific queue of RabbitMQ
-        rabbitTemplate.convertAndSend("myQueue", meinModel);
+        rabbitTemplate.convertAndSend("myQueue", proxyAppModel);
 
         return new ResponseEntity<>(additionalData, HttpStatus.OK);
     }
